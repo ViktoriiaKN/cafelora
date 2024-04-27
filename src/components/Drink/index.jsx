@@ -14,7 +14,7 @@ export const Drink = (props) => {
           ))}
         </div>
       </div>
-      <form className="drink__controls">
+      <form data-id={props.id} className="drink__controls">
         <input type="hidden" className="order-id" value="1" />
 
         {props.ordered ? (

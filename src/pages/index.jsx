@@ -32,6 +32,12 @@ document.querySelector('#root').innerHTML = render(
   </div>,
 );
 
+const orderForm = document.querySelectorAll('.drink__controls')
+orderForm.forEach((form) => {
+  form.addEventListener('submit', (e) => {
+   const id =  e.target.dataset.id
+  })
+})
 
 const navBtnElement = document.querySelector('.nav-btn');
 const rolloutNav = document.querySelector('.rollout-nav');
