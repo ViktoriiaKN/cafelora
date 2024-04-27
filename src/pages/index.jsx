@@ -22,3 +22,9 @@ document.querySelector('#root').innerHTML = render(
     <Footer />
   </div>
 );
+
+const navBtnElement = document.querySelector('.nav-btn');
+navBtnElement.addEventListener('click', () => {
+  const rolloutNav = document.querySelector('.rollout-nav');
+  rolloutNav.classList.toggle('nav-closed');
+});
