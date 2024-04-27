@@ -11,7 +11,7 @@ import { Menu } from '../components/Menu';
 document.querySelector('#root').innerHTML = render(
   <div className="page">
     <Header />
-    
+
     <main>
       <Banner />
       <Menu />
@@ -20,11 +20,15 @@ document.querySelector('#root').innerHTML = render(
     </main>
 
     <Footer />
-  </div>
+  </div>,
 );
 
 const navBtnElement = document.querySelector('.nav-btn');
-navBtnElement.addEventListener('click', () => {
-  const rolloutNav = document.querySelector('.rollout-nav');
+const rolloutNav = document.querySelector('.rollout-nav');
+
+const navClosed = () => {
   rolloutNav.classList.toggle('nav-closed');
-});
+};
+navBtnElement.addEventListener('click', navClosed);
+
+rolloutNav.addEventListener('click', navClosed);
