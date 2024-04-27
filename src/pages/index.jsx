@@ -8,13 +8,22 @@ import { Footer } from '../components/Footer';
 import { Gallery } from '../components/Gallery';
 import { Menu } from '../components/Menu';
 
+// fetching drinks from API
+const fetchDrinks = async () => {
+  const response = await fetch(`http://localhost:4000/api/drinks`);
+  const json = await response.json();
+  return json.data;
+};
+
+const drinks = await fetchDrinks();
+
 document.querySelector('#root').innerHTML = render(
   <div className="page">
     <Header />
 
     <main>
       <Banner />
-      <Menu />
+      <Menu drinks={drinks} />
       <Gallery />
       <Contact />
     </main>

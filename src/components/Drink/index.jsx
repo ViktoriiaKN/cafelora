@@ -6,11 +6,12 @@ return (<div className="drink">
                 <div className="drink__cup">
                   <img src={props.image} />
 
-                  
                 </div>
                 <div className="drink__info">
                   <h3>{props.name}</h3>
-                  <Layer color="#feeeca" label="mléčná pěna"/>
+                  {props.layers.map(layer => (
+                  <Layer key={layer.label} color={layer.color} label={layer.label}/>
+                  ))}
                 </div>
               </div>
               <form className="drink__controls">

@@ -7,7 +7,7 @@
 
 .drinks-list {
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(20rem, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   justify-content: center;
   justify-items: center;
   grid-gap: 1rem;
@@ -96,6 +96,5 @@
 }
 
 .layer__label {
-  height: 1rem;
   line-height: 1rem;
 }
