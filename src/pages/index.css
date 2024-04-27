@@ -1,14 +1,4 @@
 /* Header */
-header {
-  padding: 1rem 0 1rem 0;
-  height: 5rem;
-  background-color: #301a1a;
-}
-
-.header__content {
-  display: flex;
-  justify-content: space-between;
-}
 
 .site-logo {
   width: 180px;
