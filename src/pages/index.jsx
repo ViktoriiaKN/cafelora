@@ -32,6 +32,7 @@ document.querySelector('#root').innerHTML = render(
   </div>,
 );
 
+
 const navBtnElement = document.querySelector('.nav-btn');
 const rolloutNav = document.querySelector('.rollout-nav');
 
