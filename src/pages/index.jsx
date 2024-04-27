@@ -2,20 +2,15 @@ import { render } from '@czechitas/render';
 import '../global.css';
 import './index.css';
 import { Header } from '../components/Header';
+import { Banner } from '../components/Banner/Index';
+import { Contact } from '../components/Contact';
 
 document.querySelector('#root').innerHTML = render(
   <div className="page">
     <Header/>
-   
+    
     <main>
-      <section className="banner">
-        <div className="container">
-          <div className="banner__content">
-            <h1>Přijď to ochutnat!</h1>
-            <p>Nabízíme kvalitní kávu, útulné prostředí a perfektní servis.</p>
-          </div>
-        </div>
-      </section>
+      <Banner/>
       <section className="menu">
         <div className="container">
           <h2>Naše nabídka</h2>
@@ -120,30 +115,7 @@ document.querySelector('#root').innerHTML = render(
         </div>
       </section>
 
-      <section>
-        <div className="container">
-          <h2>Kde nás najdete</h2>
-          <div className="contact">
-            <div className="contact__address">
-              Na Mýtě 240 <br />
-              514 03 Byšky nad Jizerou <br />
-              Tel: +420 775 334 427
-            </div>
-            <table className="contact__hours">
-              <tr><td>Pondělí</td><td>ZAVŘENO</td></tr>
-              <tr><td>Úterý</td><td>11:00 - 22:00</td></tr>
-              <tr><td>Středa</td><td>11:00 - 22:00</td></tr>
-              <tr><td>Čtvrtek</td><td>11:00 - 22:00</td></tr>
-              <tr><td>Sobota</td><td>9:00 - 02:00</td></tr>
-              <tr><td>Neděle</td><td>9:00 - 02:00</td></tr>
-            </table>
-            <img
-              className="contact__map"
-              src="./img/map.png"
-            />
-          </div>
-        </div>
-      </section>
+<Contact/>
     </main>
 
     <footer>
