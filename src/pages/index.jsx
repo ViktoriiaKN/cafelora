@@ -11,16 +11,14 @@ import { Menu } from '../components/Menu';
 document.querySelector('#root').innerHTML = render(
   <div className="page">
     <Header />
-
+    
     <main>
       <Banner />
       <Menu />
-
       <Gallery />
-
       <Contact />
     </main>
 
     <Footer />
-  </div>,
+  </div>
 );
