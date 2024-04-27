@@ -32,12 +32,25 @@ document.querySelector('#root').innerHTML = render(
   </div>,
 );
 
-const orderForm = document.querySelectorAll('.drink__controls')
+const orderForm = document.querySelectorAll('.drink__controls');
 orderForm.forEach((form) => {
-  form.addEventListener('submit', (e) => {
-   const id =  e.target.dataset.id
-  })
-})
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const id = e.target.dataset.id;
+    const ordered = drinks.find((drink) => drink.id === Number(id)).ordered;
+
+    await fetch('http://localhost:4000/api/drinks/' + id, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify([
+        { op: 'replace', path: '/ordered', value: !ordered },
+      ]),
+    });
+    window.location.reload();
+  });
+});
 
 const navBtnElement = document.querySelector('.nav-btn');
 const rolloutNav = document.querySelector('.rollout-nav');
